@@ -4,7 +4,9 @@
 //////////////////STEP 1////////////////////
 //Create an array called 'groceries' that contains three grocery items as a string
 
-// Code Here
+let groceries = {
+    
+}
 
 //////////////////STEP 2////////////////////
 //Create a variable called 'yourName' that is equal to your name as a string
