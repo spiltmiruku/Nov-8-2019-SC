@@ -111,8 +111,8 @@ const bigOrSmall = arr => {
 
 let arrayReverser = (arr) => {
 	let reversed = [];
-	for (let i = arr.length - 1; i <= 0; i--) {
-	 arr(arr[i]) += reversed
+	for (let i = arr.length - 1; i >= 0; i--) {
+	 reversed.push(arr[i])
 	} return reversed
 }
 
@@ -129,28 +129,33 @@ let doubled = myNumbers.map(n => n * 2);
 
 //////////////////PROBLEM 15////////////////////
 
-// Now lets use .filter to only get the nubmer(s) greater than 100. Call the new array 'filtered'
+// Now lets use .filter to only get the number(s) greater than 100. Call the new array 'filtered'
 
-// Code Here
+let filtered = myNumbers.filter(n => n > 100);
 
 //////////////////PROBLEM 16////////////////////
 
 // Next up, reduce to get the total of the array. call the new array 'total'
 
-// Code Here
+let total = myNumbers.reduce((a,b) => a += b);
 
 //////////////////PROBLEM 17////////////////////
 
 // Last, lets use .forEach to find the index of each item in the array. First, create an empty array called myNumbersIndex. Next, using forEach, push each items index from the myNumbers array to the myNumbersIndex array
 
-// Code Here
+// let myNumbersIndex = [];
+// arr.forEach(el => {
+// 	myNumbersIndex.push(myNumbers.i(...myNumbersIndex))
+// });
+
 
 //////////////////PROBLEM 18////////////////////
 
 // Did you know that George Foreman has five sons named George? Let's go ahead and change everyone's name in the notGeorge array to George using .map. Call the new array 'forTheLoveOfGeorge'
 const notGeorge = ["Louis", "Ted", "Bill", "Sharon", "Mark", "Angela"];
 
-// Code Here
+let forTheLoveOfGeorge = notGeorge.map(n => n[i] = 'George');
+
 
 //////////////////PROBLEM 19////////////////////
 
