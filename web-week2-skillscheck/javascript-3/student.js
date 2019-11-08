@@ -4,34 +4,62 @@
 //////////////////STEP 1////////////////////
 //Create an array called 'groceries' that contains three grocery items as a string
 
-let groceries = {
-    
-}
+let groceries = ['Lettuce', 'Tomatoes', 'Bacon'];
+
 
 //////////////////STEP 2////////////////////
 //Create a variable called 'yourName' that is equal to your name as a string
 
-// Code Here
+let yourName = 'Kate';
 
 //////////////////STEP 3////////////////////
 //Create a function called 'setGroceryListTitle' that takes in one parameter called x. The function should return a string of 'XPARAM's Grocery List'.
 
-// Code Here
+let setGroceryListTitle = (x => yourName + `'s Grocery List` 
+)
 
 //////////////////STEP 4////////////////////
-//Create a function called 'addItem' that takes in one paramter called item. Add the item param to the end of the groceries array created above. Inside of addItem, invoke displayData() which is a function we created that takes care of some of the leg work unrelated to this module.
+//Create a function called 'addItem' that takes in one parameter called item. Add the item param to the end of the groceries array created above. Inside of addItem, invoke displayData() which is a function we created that takes care of some of the leg work unrelated to this module.
 
-// Code Here
+let addItem = (item) => {
+    groceries.push(item); 
+     displayData();
+};
 
 //////////////////STEP 5////////////////////
-//Create a function called removeItem that takes in one parmater called index. Inside of the function remove the item from the groceries array above using splice. Invoke the displayData() function again.
+//Create a function called removeItem that takes in one parameter called index. Inside of the function remove the item from the groceries array above using splice. Invoke the displayData() function again.
 
-// Code Here
+let removeItem = (index) => {
+groceries.splice(3, 1);
+    displayData();
+}
 
 //////////////////STEP 6////////////////////
 //Create a function called 'checkGroceryCount'. Inside of the function check the total number of groceries you need to get using .length. Using an else/if statement, check if the number is greater than or equal to 5, return the string 'That looks like a big trip' from the function. If the number of groceries is equal to one, return the string '1 item'. For numbers between 1 and 5, return the string 'NUMBER items' with number replacing the number of items
 
-// Code Here
+
+let checkGroceryCount = (i) => {
+    for(let i = 0; i < i.length; i++){
+        if (i.length >= 5){
+         return 'That looks like a big trip'
+        }
+        else if (i.length === 1){
+            return '1 item'
+        }
+        else {
+            return i.length + 'items'
+        }
+}
+}
+
+//Trying out code using Ternary
+
+// let checkGroceryCount = (i) => {
+//     for(let i = 0; i < i.length; i++){
+//         return i >= 5 ? 'That looks like a big trip' :
+//         i === 1 ? '1 item' : i + 'items'
+//     }
+// };
 
 //////////////////STEP 6////////////////////
 // Refresh the index.html page. You should now see the same thing you saw when you first loaded the page but you should now be able to add items to your grocery list with a dynamic total showing. If you double click on an item, it should remove that item
