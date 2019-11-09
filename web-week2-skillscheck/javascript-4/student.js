@@ -59,9 +59,10 @@ let setColor = arr => {
 //Create a function called 'setPowers' that takes in arr as a parameter. Loop over the arr param and run a function called createLi(), which will take each item of the array as an agument. The createLi function is a function we created to set the data on the screen. It outside the scope of this project
 
 let setPowers = arr => {
-  for (let i = 0; i < arr.length; i++) {}
+  for (let i = 0; i < arr.length; i++) {
+      createLi(arr[i]);}
 };
-createLi(setPowers.arr[i]);
+
 
 //////////////////Step 6////////////////////
 //Lastly, create a function called redactInfo that will take in an obj as a parameter. Let's imagine our super hero needs to go undercover and we need to remove all info about them. That is what this function will do. Loop over the object and change each keys value to 'redacted'. Outside of the loop but still in the redactInfo function, run the function redacted() which is a function we created that will update the text on the screen.
@@ -69,7 +70,5 @@ createLi(setPowers.arr[i]);
 let redactInfo = obj => {
   for (let i = 0; i < obj.length; i++) {
     obj[i].pop("redacted");
-  }
+  }redacted();
 };
-
-redacted();
