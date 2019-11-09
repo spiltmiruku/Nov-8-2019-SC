@@ -22,7 +22,7 @@ var answer = 0
 //you created above called rubberDucks?
 
 // var arrayLength = Array.length(rubberDucks)
-// var arrayLength = rubberDucks.length
+var arrayLength = rubberDucks.length
 // var arrayLength = rubberDucks.len
 // var arrayLength = rubberDucks.length()
 
@@ -35,7 +35,7 @@ var answer = 0
 //The passed-in array should NOT be modified.
 
 let getLast = (arr) => {
-    return arr.length - 1
+    return arr.slice(-1)[0];
 }
 
 //////////////////PROBLEM 4////////////////////
@@ -45,8 +45,7 @@ let getLast = (arr) => {
 //at the numbered index of that array.
 //The passed-in array should NOT be modified.
 
-//Code here
-
+let getElement = ((arr, i) => arr[i])
 
 //////////////////PROBLEM 5////////////////////
 
@@ -55,7 +54,9 @@ let getLast = (arr) => {
 //should change the element at the numbered index of that array
 //to the given value. You do not need to return the array.
 
-//Code here
+let changeElement = (arr, i, val) => {
+    arr[i] = val;
+}
 
 
 //////////////////PROBLEM 6////////////////////
@@ -63,4 +64,7 @@ let getLast = (arr) => {
 //Create a function called trim that takes in an array and removes 
 //the last element. trim should return the array.
 
-//Code here
+let trim = (arr) => {
+    arr.splice(-1, 1)
+    return arr;
+}
