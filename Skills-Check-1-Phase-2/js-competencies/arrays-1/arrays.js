@@ -34,8 +34,9 @@ var answer = 0
 //parameter: an array, and returns the last element of the array.
 //The passed-in array should NOT be modified.
 
-//Code here
-
+let getLast = (arr) => {
+    return arr.length - 1
+}
 
 //////////////////PROBLEM 4////////////////////
 

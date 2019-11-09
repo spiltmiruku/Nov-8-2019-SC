@@ -49,7 +49,9 @@ let homeTown = me.homeTown;
 // Next, create a for loop to loop over the array. If any of the colors you chose is 'blue', change it's value to '#4D4DFF' which is just a more appealing color of blue. Outside of the for loop but still inside of setColor, invoke the function called background which will take in three arguments. These arguments should be each item of your array. This is a function we created for you to set the background colors.
 
 let setColor = arr => {
-  for (let i = 0; i < arr.length; i++) {}
+  for (let i = 0; i < arr.length; i++) {
+      arr.splice(2)
+  }
   background("#fff694", "#abf7d7", "#4db5ff");
 };
 
@@ -69,6 +71,6 @@ let setPowers = arr => {
 
 let redactInfo = obj => {
   for (let i = 0; i < obj.length; i++) {
-    obj[i].pop("redacted");
+     obj[i] = "redacted";
   }redacted();
 };
