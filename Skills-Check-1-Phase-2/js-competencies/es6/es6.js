@@ -83,11 +83,9 @@ var answers = ["Example B", "Example C", "Example D"]
 //take in a string, remove all the spaces, and return the
 //string without spaces.
 
-let cleanUp = (str) => {
-  str.split(' ').join('')
-};
+let cleanUp = (str => str.replace(/ /g, ''));
 
-// Might need to learn Regex to troubleshoot
+// LEARN REGEX!
 
 //////////////////PROBLEM 7////////////////////
 //Finish the function below. Assume that the
@@ -97,7 +95,7 @@ let cleanUp = (str) => {
 
 function whatOcean(obj) {
   const {ocean} = obj;
-  return obj;
+  return ocean;
 }
 
 //////////////////PROBLEM 8////////////////////
@@ -111,4 +109,4 @@ function whatOcean(obj) {
 //"spaghetti & liver with onions"
 
 
-let leftovers = ((str, rest) => '+ " & ", + ...rest')
+let leftovers = ((str, ...rest) => str + ' & ' + rest[rest.length - 1])
