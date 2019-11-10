@@ -94,23 +94,20 @@ let undefiner = (arr) => {
 //return "FLYING NOCTURNAL MAMMAL MAN!". Otherwise, return the result of
 //the parameter divided by 2.
 
-let nananan = (par => par % 2 ===  NaN ? "FLYING NOCTURNAL MAMMAL MAN!" : par % 2);
+let nananan = (par => isNaN(par / 2) ? "FLYING NOCTURNAL MAMMAL MAN!" : par / 2);
 
 
-//Now, call nananan with the value NaN, and store the
-//result of the function call in a variable called "na".
+// Now, call nananan with the value NaN, and store the
+// result of the function call in a variable called "na".
 
-var na = nananan (Nan);
+var na = nananan(NaN);
 
 ///////////////////Problem 12//////////////////
 //Create a function called arrayChecker that takes
 //in a parameter. arrayChecker should return true
 //if the parameter is an array, and false otherwise.
 
-let arrayChecker = arrayChecker.map ((par, arr) => {
-    for(let i = 0; i < arrayChecker.length; i++);
-    arrayChecker.arr[i] === par ? true : false;
-});
+let arrayChecker = (par => Array.isArray(par));
 
 ///////////////////Problem 13//////////////////
 //Create a function called numFromString that takes
