@@ -9,7 +9,10 @@
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
   
-  //Code here
+  let dragonMapper = dragonMapper.map((arr, el) => {
+    forEach(arr.el[i] + '...here be dragons')
+    return arr;
+  });
 
 
 
@@ -20,8 +23,10 @@
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
   
-  //Code here
-
+let cookieLoversOnly = cookieLoversOnly.filter ((arr, el) => {
+  arr.el !== 'favoriteCookie';
+  return cookieLoversOnly;
+});
 
 //////////////////PROBLEM 3////////////////////
 
@@ -34,8 +39,9 @@
 //Hint: there is an array method for this.
 
 
-  //Code here
+function changeValue (arr, cb) {
 
+} 
 
 
 //////////////////PROBLEM 4////////////////////
@@ -74,4 +80,8 @@
 //string. Use built-in methods for taking the string 
 //apart, reversing it, and putting it back together again.
 
-  //Code here
+let reverseMe = (str) => {
+  str.split('')
+  str.reverse('')
+  str.join('')
+}

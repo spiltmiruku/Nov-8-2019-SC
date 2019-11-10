@@ -37,15 +37,11 @@ let cutItOut = arr => {
 //and finds the element "Tolkn", and changes it to "Tolkien".
 //changeName should return the array.
 
-let changeName = (arr, el, i) => {
-  if (arr.el === "Tolkn") {
-    arr.el[i] = "Tolkien";
+let changeName = arr => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "Tolkn") {
+      arr[i] = "Tolkien";
+    }
   }
   return arr;
 };
-
-// let changeName = (arr, el, i) => {
-//     if (arr.el === 'Tolkn'){
-//         arr.el[i].splice(i, 1, 'Tolkien')
-//     }return arr;
-// }
