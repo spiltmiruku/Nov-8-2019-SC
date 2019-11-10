@@ -8,7 +8,15 @@
 //'...here be dragons' to the end of each element. 
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
-  
+
+function dragonMapper (arr) {
+  dragonMapper.map += '...here be dragons'
+  return 
+}
+
+
+
+
   let dragonMapper = dragonMapper.map((arr, el) => {
     forEach(arr.el[i] + '...here be dragons')
     return arr;
