@@ -7,20 +7,19 @@ var duck = {
   pond: "Hyde Park Serpentine",
   bites: true,
   fluffiness: 100
-}
+};
 
 //1. Using dot notation to access the duck's "name" property.
 // var accessByDotNotation = duck."name"
 // var accessByDotNotation = Object[duck].name
-var accessByDotNotation = duck.name
+var accessByDotNotation = duck.name;
 
 //2. Using bracket notation to access duck's "bites" property.
 // var accessByBracketNotation = duck{"bites"}
 // var accessByBracketNotation = Object[duck][bites]
 // var accessByBracketNotation = duck[bites]
-var accessByBracketNotation = duck["bites"]
+var accessByBracketNotation = duck["bites"];
 // var accessByBracketNotation = duck(bites)
-
 
 ///////////////////Problem 2///////////////////
 
@@ -32,31 +31,32 @@ var person = {
   name: "Ella",
   city: "Edinburgh",
   job: "Leader of Ghost Tours"
-}
+};
 
-person.moveCities() = "city"
-
+person.moveCities = newCity => {
+  person.city = newCity;
+};
 
 ///////////////////Problem 3///////////////////
 
 //Create a function called keyAccessor. keyAccessor should take
 //in two parameters: an array of people, and an object.
 //Each person's name is also a property on an object.
-//keyAccessor should loop through the array of names, and 
-//access corresponding values for each name in the object, 
-//pushing the values into an empty array. 
+//keyAccessor should loop through the array of names, and
+//access corresponding values for each name in the object,
+//pushing the values into an empty array.
 //keyAccessor should return the new array.
 
 //Example set of names that could be passed in
-var names = ["Dan", "Todd", "Andrew", "Doug"]
+var names = ["Dan", "Todd", "Andrew", "Doug"];
 
 //Example object that could be passed in
 var people = {
   Dan: { city: "Las Vegas", age: 24 },
   Todd: { city: "France", age: 28 },
   Andrew: { city: "Portland", age: 12 },
-  Doug: { city: "New New York", age: 56 },
-}
+  Doug: { city: "New New York", age: 56 }
+};
 
 //Example new array that would be returned
 var sampleOutput = [
@@ -64,12 +64,25 @@ var sampleOutput = [
   { city: "France", age: 28 },
   { city: "Portland", age: 12 },
   { city: "New New York", age: 56 }
-]
+];
 
 function keyAccessor(arr, obj) {
-name: name;
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let key = arr[i];
+    let value = obj[key];
+    newArr.push(value)
+  }
+  return newArr;
+}
 
-};
+// let keyAccessor = (arr,obj) => {
+//   let newArr = []
+//   for (let i = 0; i < arr.length; i++){
+//     newArr.push(obj[arr[i]])
+//   }
+//   return newArr;
+// }
 
 
 ///////////////////Problem 4///////////////////
@@ -79,24 +92,24 @@ name: name;
 //the object; and push each value into the empty array.
 //getVals should return the new array.
 
-function getVals (obj){
-  let newArr = [];
-  for(key in obj){
-    key.push(newArr);
-  }return newArr;
+function getVals(obj) {
+  let newArray = [];
+  for (key in obj) {
+    newArray.push(obj[key]);
+  }
+  return newArray;
 }
-
 
 ///////////////////Problem 5///////////////////
 
-//Use the built-in keys method to get the keys from the 
+//Use the built-in keys method to get the keys from the
 //object below; store them in a variable called "doorKeys"
 
 var doors = {
-  red: "cedar", 
-  blue: "stone", 
-  green: "pine", 
-  brown: "mahogany", 
-}
+  red: "cedar",
+  blue: "stone",
+  green: "pine",
+  brown: "mahogany"
+};
 
-var doorKeys = doors.keys();
+var doorKeys = Object.keys(doors);
