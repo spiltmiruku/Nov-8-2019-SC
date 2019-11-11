@@ -79,7 +79,12 @@ name: name;
 //the object; and push each value into the empty array.
 //getVals should return the new array.
 
-//CODE HERE
+function getVals (obj){
+  let newArr = [];
+  for(key in obj){
+    key.push(newArr);
+  }return newArr;
+}
 
 
 ///////////////////Problem 5///////////////////
@@ -94,4 +99,4 @@ var doors = {
   brown: "mahogany", 
 }
 
-//Code here
+var doorKeys = doors.keys();
