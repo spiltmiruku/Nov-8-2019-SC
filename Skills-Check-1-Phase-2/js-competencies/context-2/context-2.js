@@ -65,12 +65,12 @@ var q3Context = 'default';
 // Using the .apply method on the book1's checkOut function, run it using book2
 // as the argument. Save the result to a variable named book2CheckOut2.
 
-
+var book2CheckOut2 = book1[checkOut](book2);
 
 
 // What is the context of applying the book1 method
 // checkOut to book2?
-// var q4Context = 'explicit';
+var q4Context = 'explicit';
 // var q4Context = "implicit"
 // var q4Context = "default"
 // var q4Context = "new"
@@ -95,15 +95,14 @@ function updatePerson(name, age, title) {
 // pass in the values "Anne Boleyn", 30, and "Queen of
 // England"; save the result to a variable named queenAnne.
 
-//Code here
-
+var queenAnne = updatePerson(person1).call('Anne Boleyn', 30, 'Queen of England');
 
 // Q2:
 // Use the method .apply to run updatePerson on person2;
 // pass in the values "Catherine of Aragon", 37, and "Former
 // Queen"; save the result to a variable named queenCatherine.
 
-//Code here
+var queenCatherine = updatePerson(person2).apply('Catherine of Aragon, 37, Former Queen');
 
 
 // /////////////////Problem 3//////////////////
