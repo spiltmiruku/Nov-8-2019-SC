@@ -3,8 +3,10 @@
 
 //Create a prototype for a String called reverse that returns the string but, like, reversed.
 
-//Code here
-
+string.prototype(str) {
+   str.split('').reverse('').join('')
+   return str;
+}
 
 //////////////////PROBLEM 2////////////////////
 
