@@ -9,9 +9,9 @@
 //ex: passed 5 --> return [0, 1, 2, 3, 4]
 
   function addNumbers(value){
-      var myNumbers = []
-      for(let i = 0; i < value.length - 1; i++){
-        value[i] = myNumbers
+      var myNumbers = [];
+      for(let i = 0; i < value; i++){
+        myNumbers.push(i);
       }
       return myNumbers;
   }
@@ -27,7 +27,7 @@
   function backwardsGreeting(arr) {
     let greetings = [];
     for(let i = arr.length - 1; i > 0; i--){
-      arr[i] += "Hello, " = greetings;
+     greetings = arr[i] + "Hello, ";
     }
   return greetings;
   }
@@ -40,11 +40,11 @@
 //the string ' frog' onto the element. Then return the array. NOTE: use
 //the variable i for your for loop
 
-  function leapFrog(arr) {
-    for(let i = 0; i < arr.length - 1; i++){
-      if (arr(arr[i]) % 2 === 1){
-        arr[i] += ' frog'
-      }
-    }
-return arr;
-  }
+//   function leapFrog(arr) {
+//     for(let i = 0; i < arr.length - 1; i++){
+//       if (arr(arr[i]) % 2 === 1){
+//         arr[i] += ' frog'
+//       }
+//     }
+// return arr;
+//   }
