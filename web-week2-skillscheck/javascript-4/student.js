@@ -26,7 +26,7 @@ let me = {
   superHeroName: "Curious Keito",
   homeTown: "Beijing",
   superPowers: ["eloquence", "incredible brain processing power", "speed"],
-  superPowerXP: Math.floor(Math.random() * 100) + 1,
+  superPowerXP: () => Math.floor(Math.random() * 100) + 1,
   profileImage: function() {
     return `https://randomuser.me/api/portraits/med/lego/${Math.floor(
       Math.random() * 10
@@ -58,7 +58,7 @@ let setColor = arr => {
 // background('lemon', 'mint', 'cornflower')
 
 //////////////////Step 5////////////////////
-//Create a function called 'setPowers' that takes in arr as a parameter. Loop over the arr param and run a function called createLi(), which will take each item of the array as an agument. The createLi function is a function we created to set the data on the screen. It outside the scope of this project
+//Create a function called 'setPowers' that takes in arr as a parameter. Loop over the arr param and run a function called createLi(), which will take each item of the array as an argument. The createLi function is a function we created to set the data on the screen. It is outside the scope of this project
 
 let setPowers = arr => {
   for (let i = 0; i < arr.length; i++) {
@@ -69,8 +69,16 @@ let setPowers = arr => {
 //////////////////Step 6////////////////////
 //Lastly, create a function called redactInfo that will take in an obj as a parameter. Let's imagine our super hero needs to go undercover and we need to remove all info about them. That is what this function will do. Loop over the object and change each keys value to 'redacted'. Outside of the loop but still in the redactInfo function, run the function redacted() which is a function we created that will update the text on the screen.
 
-let redactInfo = obj => {
-  for (let i = 0; i < obj.length; i++) {
-     obj[i] = "redacted";
-  }redacted();
-};
+// let redactInfo = obj => {
+//   for (let i = 0; i < obj.length; i++) {
+//      obj[i] = "redacted";
+//   }redacted();
+// };
+
+
+let redactInfo = (obj) =>{
+    for(var key in obj){
+        obj[key] = 'redacted';
+    }
+    redacted();
+}
